@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { addNewUser, getAllUsers, getUserByEmail } from "../controllers/users.controller";
+import { addFavorite, addNewUser, getAllUsers, getGarmentIMG, getOutfitIMG, getUserByEmail } from "../controllers/users.controller";
 
 const router = Router()
 
@@ -8,10 +8,14 @@ router.get("/users/", getAllUsers)
 
 router.get("/users/email/", getUserByEmail)
 
+router.get("/garments/", getGarmentIMG)
+
+router.get("/outfits/", getOutfitIMG)
+
 //POST##############################################################################################################################################################################################
 router.post("/users/", addNewUser)
 //PUT###############################################################################################################################################################################################
-
+router.put("/outfits/favs/", addFavorite)
 //DELETE############################################################################################################################################################################################
 
 export default router
