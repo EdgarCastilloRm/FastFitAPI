@@ -1,3 +1,3 @@
 export const queries = {
-    getAllUsers: "SELECT *FROM Users"
+    getAllUsers: "SELECT *FROM Users",
 }
